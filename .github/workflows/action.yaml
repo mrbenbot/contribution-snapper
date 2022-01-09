@@ -1,0 +1,19 @@
+name: Contribution Snap!
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "55 8 * * *"
+jobs:
+  contribute:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - run: npm install
+      - run: npm run snap
+        env:
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+          FROM_EMAIL: ${{ secrets.FROM_PASSWORD }}
+          TO_EMAIL: ${{ secrets.TO_PASSWORD }}

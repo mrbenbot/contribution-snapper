@@ -1,0 +1,23 @@
+{
+  "name": "contribution-snapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "snap": "node --loader ts-node/esm ./index.ts",
+    "dev": "node -r dotenv/config --loader ts-node/esm ./index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "nodemailer": "^6.7.2",
+    "puppeteer": "^13.0.1",
+    "ts-node": "^10.4.0"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.4"
+  }
+}
