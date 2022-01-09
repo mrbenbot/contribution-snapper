@@ -17,4 +17,4 @@ jobs:
         with:
           name: image-of-the-day
           path: image.jpeg
-          retention-days: 365
+          retention-days: 90
