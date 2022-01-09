@@ -13,7 +13,8 @@ jobs:
           node-version: "14"
       - run: npm install
       - run: npm run snap
-        env:
-          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
-          TO_EMAIL: ${{ secrets.TO_EMAIL }}
+      - uses: actions/upload-artifact@v2
+        with:
+          name: image-of-the-day
+          path: image.jpeg
+          retention-days: 365
